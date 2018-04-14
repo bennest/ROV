@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<config version='1.0'>
+    <description>LED test config</description>
+
+    <adapter class='adapter.gpio.GpioOutput'  name='LED'>
+        <description>Sample GPIO LED output</description>
+
+        <gpio port='GPIO25'>
+            <default dir='OUT' pull='PUD_OFF' default='low' />
+            <active dir='OUT' pull='PUD_OFF' default='low' />
+        </gpio>
+
+        <input name='low'>
+            <broadcast name='pin25low'/>
+            <broadcast name='LEDOff'/>
+        </input>
+        <input name='high'>
+            <broadcast name='pin25high'/>
+            <broadcast name='LEDOn'/>
+        </input>
+    </adapter>
+    
+</config>
